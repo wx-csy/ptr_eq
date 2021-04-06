@@ -1,0 +1,14 @@
+[package]
+name = "ptr_eq"
+version = "0.1.0"
+authors = ["Shaoyuan Chen <chensy20@mails.tsinghua.edu.cn>"]
+edition = "2018"
+
+[workspace]
+members = [
+    ".", 
+    "ptr_eq-macro",
+]
+
+[dependencies]
+ptr_eq-macro = { path = "ptr_eq-macro" }
