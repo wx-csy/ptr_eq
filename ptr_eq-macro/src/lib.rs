@@ -1,6 +1,8 @@
 extern crate proc_macro;
-#[macro_use] extern crate syn;
-#[macro_use] extern crate quote;
+#[macro_use]
+extern crate syn;
+#[macro_use]
+extern crate quote;
 
 use proc_macro::TokenStream;
 use syn::DeriveInput;
@@ -11,7 +13,7 @@ pub fn derive_ptr_eq(input: TokenStream) -> TokenStream {
     let name = input.ident;
     let (impl_gn, ty_gn, where_cl) = input.generics.split_for_impl();
 
-    let expanded = quote!{
+    let expanded = quote! {
         unsafe impl #impl_gn PtrEq for #name #ty_gn #where_cl {}
 
         // &T
@@ -31,7 +33,7 @@ pub fn derive_ptr_eq(input: TokenStream) -> TokenStream {
         }
 
         // &T and &T
-        
+
         impl #impl_gn ::core::cmp::PartialEq<&#name #ty_gn> for &#name #ty_gn #where_cl {
             #[inline]
             fn eq(&self, other: &&#name #ty_gn) -> bool {
