@@ -1,14 +1,5 @@
-[package]
-name = "ptr_eq"
-version = "0.0.1"
-authors = ["Shaoyuan Chen <chensy20@mails.tsinghua.edu.cn>"]
-edition = "2018"
-
 [workspace]
 members = [
-    ".", 
+    "ptr_eq", 
     "ptr_eq-macros",
 ]
-
-[dependencies]
-ptr_eq-macros = { version = "*", path = "ptr_eq-macros" }

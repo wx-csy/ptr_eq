@@ -1,0 +1,12 @@
+[package]
+name = "ptr_eq"
+version = "0.0.1"
+authors = ["Shaoyuan Chen <chensy20@mails.tsinghua.edu.cn>"]
+edition = "2018"
+description = "[WIP] by-address comparisons and hashes in Rust."
+license = "MIT"
+repository = "https://github.com/wx-csy/ptr_eq"
+documentation = "https://docs.rs/ptr_eq/0.0.1"
+
+[dependencies]
+ptr_eq-macros = { version = "0.0.1", path = "../ptr_eq-macros" }
